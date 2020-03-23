@@ -4,26 +4,15 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Corne Cherry"
-Date "2018-08-25"
-Rev "2.0"
-Comp "foostan"
+Title "Sheltie"
+Date "2020-03-22"
+Rev "1.0"
+Comp "Reluctant Panda"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L corne-cherry-rescue:ProMicro-kbd U1
-U 1 1 5A5E14C2
-P 1800 1950
-F 0 "U1" H 1800 2900 60  0000 C CNN
-F 1 "ProMicro" H 1800 1400 60  0000 C CNN
-F 2 "kbd:ProMicro_v2" H 1900 900 60  0001 C CNN
-F 3 "" H 1900 900 60  0000 C CNN
-	1    1800 1950
-	1    0    0    -1  
-$EndComp
 $Comp
 L corne-cherry-rescue:SW_PUSH-kbd SW2
 U 1 1 5A5E2699
@@ -558,10 +547,6 @@ Text GLabel 2500 1900 2    47   Input ~ 0
 col3
 Text GLabel 2500 2000 2    47   Input ~ 0
 col4
-Text GLabel 2500 2100 2    47   Input ~ 0
-col5
-Text GLabel 1100 2100 0    47   Input ~ 0
-row3
 Text GLabel 1100 2000 0    47   Input ~ 0
 row2
 Text GLabel 1100 1900 0    47   Input ~ 0
@@ -593,41 +578,6 @@ $EndComp
 Text GLabel 1100 1200 0    47   Input ~ 0
 LED
 Text GLabel 1100 1300 0    47   Input ~ 0
-data
-$Comp
-L Device:Jumper JP1
-U 1 1 5A7600BC
-P 3600 3375
-F 0 "JP1" H 3600 3525 50  0000 C CNN
-F 1 " " H 3600 3295 50  0000 C CNN
-F 2 "kbd:JPC2" H 3600 3375 50  0001 C CNN
-F 3 "" H 3600 3375 50  0001 C CNN
-	1    3600 3375
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:VCC #PWR08
-U 1 1 5A76093E
-P 3100 3175
-F 0 "#PWR08" H 3100 3025 50  0001 C CNN
-F 1 "VCC" H 3100 3325 50  0000 C CNN
-F 2 "" H 3100 3175 50  0001 C CNN
-F 3 "" H 3100 3175 50  0001 C CNN
-	1    3100 3175
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR09
-U 1 1 5A760ADB
-P 3100 3425
-F 0 "#PWR09" H 3100 3175 50  0001 C CNN
-F 1 "GND" H 3100 3275 50  0000 C CNN
-F 2 "" H 3100 3425 50  0001 C CNN
-F 3 "" H 3100 3425 50  0001 C CNN
-	1    3100 3425
-	1    0    0    -1  
-$EndComp
-Text GLabel 3900 3375 2    60   Input ~ 0
 data
 Text GLabel 2500 1400 2    47   Input ~ 0
 reset
@@ -864,11 +814,8 @@ F 3 "" H 6825 6575 60  0001 C CNN
 	1    6825 6575
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2500 2300
-NoConn ~ 1100 2300
 Text GLabel 2500 1600 2    47   Input ~ 0
 col0
-NoConn ~ 1100 2200
 Text GLabel 1100 1600 0    47   Input ~ 0
 SDA
 Text GLabel 1100 1700 0    47   Input ~ 0
@@ -1163,17 +1110,6 @@ F 3 "" H 2700 1500 50  0001 C CNN
 $EndComp
 NoConn ~ 2500 1200
 $Comp
-L corne-cherry-rescue:MJ-4PP-9-kbd J1
-U 1 1 5ACD605D
-P 2800 3300
-F 0 "J1" H 2800 3450 50  0000 C CNN
-F 1 "MJ-4PP-9" H 2800 3150 50  0000 C CNN
-F 2 "kbd:MJ-4PP-9" H 3075 3475 50  0001 C CNN
-F 3 "" H 3075 3475 50  0001 C CNN
-	1    2800 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x03 J3
 U 1 1 5ACCF3D8
 P 1175 6625
@@ -1208,28 +1144,6 @@ F 3 "" H 1525 6725 50  0001 C CNN
 $EndComp
 Text GLabel 1625 6625 2    60   Input ~ 0
 LED
-$Comp
-L Connector_Generic:Conn_01x01 P2
-U 1 1 5AD20E0A
-P 3300 3575
-F 0 "P2" H 3300 3675 50  0000 C CNN
-F 1 "i2c-pin" V 3400 3575 50  0000 C CNN
-F 2 "kbd:1pin_conn" H 3300 3575 50  0001 C CNN
-F 3 "" H 3300 3575 50  0001 C CNN
-	1    3300 3575
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x01 P1
-U 1 1 5AD21C5C
-P 3300 3025
-F 0 "P1" H 3300 3125 50  0000 C CNN
-F 1 "i2c-pin" V 3400 3025 50  0000 C CNN
-F 2 "kbd:1pin_conn" H 3300 3025 50  0001 C CNN
-F 3 "" H 3300 3025 50  0001 C CNN
-	1    3300 3025
-	0    -1   -1   0   
-$EndComp
 $Comp
 L corne-cherry-rescue:SK6812MINI-kbd L27
 U 1 1 5AD785A7
@@ -1650,23 +1564,11 @@ Wire Wire Line
 Wire Wire Line
 	2500 1500 2700 1500
 Wire Wire Line
-	3000 3375 3300 3375
-Wire Wire Line
-	3000 3275 3100 3275
-Wire Wire Line
-	3100 3275 3100 3175
-Wire Wire Line
-	3000 3325 3100 3325
-Wire Wire Line
-	3100 3325 3100 3425
-Wire Wire Line
 	1375 6525 1525 6525
 Wire Wire Line
 	1375 6625 1625 6625
 Wire Wire Line
 	1375 6725 1525 6725
-Wire Wire Line
-	3000 3225 3300 3225
 Wire Wire Line
 	5825 3575 5825 3450
 Wire Wire Line
@@ -2158,6 +2060,104 @@ Wire Wire Line
 	8400 6475 8400 6675
 Wire Wire Line
 	8400 6675 8225 6675
+Wire Wire Line
+	3000 3225 3300 3225
+Wire Wire Line
+	3100 3325 3100 3425
+Wire Wire Line
+	3000 3325 3100 3325
+Wire Wire Line
+	3100 3275 3100 3175
+Wire Wire Line
+	3000 3275 3100 3275
+Wire Wire Line
+	3000 3375 3300 3375
+$Comp
+L Connector_Generic:Conn_01x01 P1
+U 1 1 5AD21C5C
+P 3300 3025
+F 0 "P1" H 3300 3125 50  0000 C CNN
+F 1 "i2c-pin" V 3400 3025 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 3300 3025 50  0001 C CNN
+F 3 "" H 3300 3025 50  0001 C CNN
+	1    3300 3025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 P2
+U 1 1 5AD20E0A
+P 3300 3575
+F 0 "P2" H 3300 3675 50  0000 C CNN
+F 1 "i2c-pin" V 3400 3575 50  0000 C CNN
+F 2 "kbd:1pin_conn" H 3300 3575 50  0001 C CNN
+F 3 "" H 3300 3575 50  0001 C CNN
+	1    3300 3575
+	0    1    1    0   
+$EndComp
+$Comp
+L corne-cherry-rescue:MJ-4PP-9-kbd J1
+U 1 1 5ACD605D
+P 2800 3300
+F 0 "J1" H 2800 3450 50  0000 C CNN
+F 1 "MJ-4PP-9" H 2800 3150 50  0000 C CNN
+F 2 "kbd:MJ-4PP-9" H 3075 3475 50  0001 C CNN
+F 3 "" H 3075 3475 50  0001 C CNN
+	1    2800 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 3375 2    60   Input ~ 0
+data
+$Comp
+L power:GND #PWR09
+U 1 1 5A760ADB
+P 3100 3425
+F 0 "#PWR09" H 3100 3175 50  0001 C CNN
+F 1 "GND" H 3100 3275 50  0000 C CNN
+F 2 "" H 3100 3425 50  0001 C CNN
+F 3 "" H 3100 3425 50  0001 C CNN
+	1    3100 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 5A76093E
+P 3100 3175
+F 0 "#PWR08" H 3100 3025 50  0001 C CNN
+F 1 "VCC" H 3100 3325 50  0000 C CNN
+F 2 "" H 3100 3175 50  0001 C CNN
+F 3 "" H 3100 3175 50  0001 C CNN
+	1    3100 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP1
+U 1 1 5A7600BC
+P 3600 3375
+F 0 "JP1" H 3600 3525 50  0000 C CNN
+F 1 " " H 3600 3295 50  0000 C CNN
+F 2 "kbd:JPC2" H 3600 3375 50  0001 C CNN
+F 3 "" H 3600 3375 50  0001 C CNN
+	1    3600 3375
+	-1   0    0    1   
+$EndComp
 Text GLabel 2500 2200 2    47   Input ~ 0
 col6
+NoConn ~ 1100 2200
+NoConn ~ 1100 2300
+NoConn ~ 2500 2300
+Text GLabel 1100 2100 0    47   Input ~ 0
+row3
+Text GLabel 2500 2100 2    47   Input ~ 0
+col5
+$Comp
+L corne-cherry-rescue:ProMicro-kbd U1
+U 1 1 5A5E14C2
+P 1800 1950
+F 0 "U1" H 1800 2900 60  0000 C CNN
+F 1 "ProMicro" H 1800 1400 60  0000 C CNN
+F 2 "kbd:ProMicro_v2" H 1900 900 60  0001 C CNN
+F 3 "" H 1900 900 60  0000 C CNN
+	1    1800 1950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
